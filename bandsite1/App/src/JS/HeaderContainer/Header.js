@@ -7,6 +7,7 @@ class Header extends React.Component {
     return (
       <header>
  <div className="nav__container">
+ <div className="nav__wrapper">
  <nav className="Navbar__Items">
     <div className="Navbar__Link">
     <img className="logo--size" src={Logo} alt="" />
@@ -24,8 +25,8 @@ class Header extends React.Component {
     <img className="man_icon" src={ManIcon} alt="" />
     </div>
   </nav>
+  </div>
 </div>
-
 </header>
 
 
