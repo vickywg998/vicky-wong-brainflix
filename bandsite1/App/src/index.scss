@@ -184,6 +184,7 @@ img.video__pic {
   width: 65%;
   background-color: pink;
   height: 1000px;
+  padding-left: 180px;
 }
 
 .video__font {
@@ -237,3 +238,28 @@ img.video__list--img {
   width: 80%;
  
 }
+
+
+/*left section video description and comments */
+
+.video_item--smallContainer {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #AFAFAF;
+}
+
+
+
+.video__paragraph--wrapper {
+  padding-top: 40px;
+  padding-right: 250px;
+}
+
+#video__paragraph {
+  @include h4-font;
+}
+
+
+
+/*comment section*/
+
