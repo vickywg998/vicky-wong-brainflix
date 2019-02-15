@@ -6,31 +6,31 @@ class Header extends React.Component {
   render() {
     return (
       <header>
- <div className="nav__container">
- <div className="nav__wrapper">
- <nav className="Navbar__Items">
-    <div className="Navbar__Link">
-    <img className="logo--size" src={Logo} alt="" />
-    </div>
-   
-  </nav>
-  <nav className="Navbar__Items Navbar__Items--right">
-    <div className="search__container">
-    <input className="search" placeholder="Search" /></div>
-   
-    <div className="Navbar__Link">
-    <input className="upload__button" value="+UPLOAD" type="button" />
-    </div>
-    <div className="Navbar__Link">
-    <img className="man_icon" src={ManIcon} alt="" />
-    </div>
-  </nav>
-  </div>
-</div>
-</header>
+        <div className="nav__container">
+          <div className="nav__wrapper">
+            <nav className="Navbar__Items">
+              <div className="Navbar__Link">
+                <img className="logo--size" src={Logo} alt="" />
+              </div>
+
+            </nav>
+            <nav className="Navbar__Items Navbar__Items--right">
+              <div className="search__container">
+                <input className="search" placeholder="Search" /></div>
+
+              <div className="Navbar__Link">
+                <input className="upload__button" value="+UPLOAD" type="button" />
+              </div>
+              <div className="Navbar__Link">
+                <img className="man_icon" src={ManIcon} alt="" />
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
 
 
- 
+
     )
   }
 }

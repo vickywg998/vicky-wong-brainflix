@@ -1,24 +1,4 @@
 /*fonts*/
-/*fonts*/
-body, header, main, section, div {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Avenir Next";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, p {
-  margin: 0;
-  padding: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 /* header*/
 .nav__container {
   width: 100%;
@@ -36,7 +16,7 @@ code {
 .nav__wrapper {
   width: 100%;
   height: 80px;
-  padding: 10px 180px;
+  padding: 10px 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,10 +39,6 @@ code {
   width: 10%;
 }
 
-.Navbar__Link {
-  padding-right: 8px;
-}
-
 .Navbar__Items--right {
   margin-left: auto;
 }
@@ -83,10 +59,8 @@ img .logo--size {
   height: 50px;
   padding: 10px 10px;
   border-radius: 8px;
-}
-
-.upload__button, .search__container {
-  padding-right: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .search {
@@ -155,19 +129,204 @@ img.video__pic {
   height: 540px;
 }
 
+#video__author {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+/*left section video description and comments */
+.video_item--bigContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video_item--smallContainer {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #AFAFAF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video__herotitle {
+  padding-top: 20px;
+}
+
+.video__paragraph--wrapper {
+  padding-top: 40px;
+  padding-right: 150px;
+}
+
+.video__herotitle {
+  padding-right: 250px;
+}
+
+#video__paragraph {
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 40px;
+}
+
+/*comment section*/
+.convo__input--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.conversation__title {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+.conversation__input {
+  border-color: #0065FF;
+  min-width: 370px;
+}
+
+.conversation__input, #comment__button {
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+
+.comment_section_container--small {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#comment__button {
+  margin-left: 16px;
+  min-width: 150px;
+  background-color: #0065FF;
+  color: white;
+}
+
+.static_comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.static_comment {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px solid #afb8c1;
+}
+
+.static_comment:nth-last-child(1) {
+  border-bottom: 2px solid #afb8c1;
+}
+
+.comment_content {
+  padding-bottom: 24px;
+}
+
+.comment_name {
+  padding-top: 24px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+  margin: 0;
+  display: inline-block;
+}
+
+.comment_icon {
+  padding-top: 18px;
+  padding-right: 20px;
+}
+
+.para {
+  padding-right: 40px;
+}
+
+.para_i {
+  padding-right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icons {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+
+.video__date {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+.video__numbers {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+  padding-right: 24px;
+}
+
+.icon__color--grey {
+  background-color: lightgrey;
+}
+
+.icon__position {
+  margin-right: 8px;
+}
+
 /* section */
 .section__container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .section__wrapper {
   width: 65%;
-  background-color: pink;
   height: 1000px;
   padding-left: 180px;
+  padding-right: 30px;
 }
 
 .video__font {
@@ -178,13 +337,11 @@ img.video__pic {
 }
 
 .card_list {
-  width: 35%;
+  width: 100%;
 }
 
 .cards__container {
   width: 100%;
-  margin-left: 20px;
-  padding-right: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,26 +388,58 @@ img.video__list--img {
 
 .video__title {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   width: 80%;
 }
 
-/*left section video description and comments */
-.video_item--smallContainer {
-  padding-top: 40px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #AFAFAF;
+/*fonts*/
+body, header, main, section, div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.video__paragraph--wrapper {
-  padding-top: 40px;
-  padding-right: 250px;
+* {
+  margin: 0;
 }
 
-#video__paragraph {
-  font-size: 14px;
-  line-height: 18px;
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
 }
 
-/*comment section*/
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+}
+
+@media only screen and (max-width: 1225px) {
+  .section__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1440px) {
+  /* Styles */
+}
 /*# sourceMappingURL=index.css.map */

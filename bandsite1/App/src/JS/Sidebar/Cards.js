@@ -1,12 +1,34 @@
 import React from 'react';
-import videoList1 from '../../Assets/Images/video-list-1.jpg'
-import videoList2 from '../../Assets/Images/video-list-2.jpg'
-import videoList3 from '../../Assets/Images/video-list-3.jpg'
-import videoList4 from '../../Assets/Images/video-list-4.jpg'
-import videoList5 from '../../Assets/Images/video-list-5.jpg'
-import videoList6 from '../../Assets/Images/video-list-6.jpg'
-import videoList7 from '../../Assets/Images/video-list-7.jpg'
-import videoList8 from '../../Assets/Images/video-list-8.jpg'
+import videoList1 from '../../../public/Images/video-list-1.jpg'
+import videoList2 from '../../../public/Images/video-list-2.jpg'
+import videoList3 from '../../../public/Images/video-list-3.jpg'
+import videoList4 from '../../../public/Images/video-list-4.jpg'
+import videoList5 from '../../../public/Images/video-list-5.jpg'
+import videoList6 from '../../../public/Images/video-list-6.jpg'
+import videoList7 from '../../../public/Images/video-list-7.jpg'
+import videoList8 from '../../../public/Images/video-list-8.jpg'
+
+import React, { Component } from 'react';
+
+// class Card extends Component { 
+//   render () {
+//     return (
+//       <div className="col s4">
+//             <div className="card">
+//                 <div className="card-image">
+//                     <img src={this.props.src} alt="" />
+//                     <span className="card-title">{this.props.title}</span>
+//                 </div>
+//                 <div className="card-content">
+//                     <p>{this.props.content}</p>
+//                 </div>
+//             </div>
+//       </div>
+//     )
+//   }
+// }
+
+// export default Card
 
 class Cards extends React.Component {
   render() {

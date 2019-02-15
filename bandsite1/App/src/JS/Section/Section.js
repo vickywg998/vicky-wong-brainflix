@@ -12,10 +12,11 @@ class Section extends React.Component {
            <VideoDescription />
            <Comments />
           </div>
+          <div className="cardlist__wrapper">
           <CardList />
+          </div>
         </div>
       </section>
-
 
 
     )
