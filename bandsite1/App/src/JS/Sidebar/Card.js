@@ -5,7 +5,6 @@ class Card extends Component {
 
   render() {
     return (
-   
 
       <div className="cards__wrapper">
           <div className="cards__item">
