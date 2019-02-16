@@ -1,5 +1,5 @@
 import React from 'react';
-import singer from '../../Assets/Images/Mohan-muruge.jpg'
+import singer from '../../../src/Assets/Images/Mohan-muruge.jpg'
 
 class Comments extends React.Component {
   render() {
@@ -21,8 +21,6 @@ class Comments extends React.Component {
               </div>
               
           </div>
-
-
           
             <div className="static_comment">
               <div className="comment_icon">

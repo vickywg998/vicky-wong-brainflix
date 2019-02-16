@@ -13,11 +13,16 @@ class Section extends React.Component {
            <Comments />
           </div>
           <div className="cardlist__wrapper">
-          <CardList />
+          <div className="cards__container">
+
+<div className="cards__wrapper">
+  <h1 className="video__font">NEXT VIDEO</h1>
+</div>
+          <CardList cards={this.props.cardImages}/>
           </div>
         </div>
+        </div>
       </section>
-
 
     )
   }

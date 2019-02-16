@@ -4,7 +4,8 @@ import './App.css';
 import Header from './JS/HeaderContainer/Header'
 import Main from './JS/Main/Main'
 import Section from './JS/Section/Section'
-import Sidebar from './JS/Sidebar/CardList'
+import CardList from '../src/JS/Sidebar/CardList'
+import cardImages from './cardImages'
 
 class App extends Component {
   render() {
@@ -12,8 +13,7 @@ class App extends Component {
       <div>
       <Header />
       <Main />
-      <Section/>
-      
+      <Section cardImages={cardImages}/>
       </div>
     )
   }
