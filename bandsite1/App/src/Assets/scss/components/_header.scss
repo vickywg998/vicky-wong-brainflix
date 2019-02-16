@@ -15,8 +15,6 @@
   flex-flow: row wrap;
   align-items: center;
   
-
-
 }
 
 .Navbar__Items {
@@ -84,8 +82,14 @@ img {
     height: 25px;
     background-image: url('../src/Assets/Icons/PNG/Icon-search.png');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position:5% 50%;
     text-indent: 20px;
   
 }
 
+
+input.upload__button {
+
+  font-size: 14px;
+font-weight: bold;
+}

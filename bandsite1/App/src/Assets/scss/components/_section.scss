@@ -1,3 +1,7 @@
+$primaryblue-color: #0095FF;
+$primaryblack-color: #323232;
+$primarygrey-color: #AFAFAF;
+
 /*left section video description and comments */
 
 .video_item--bigContainer {
@@ -9,8 +13,9 @@
 .video_item--smallContainer {
   padding-top: 40px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #AFAFAF;
+  border-bottom: 1px solid #AFAFAF;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   
 }
@@ -51,7 +56,7 @@ padding-top: 20px;
   
 }
 .conversation__input, #comment__button {
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 8px;
 }
 
@@ -66,7 +71,7 @@ padding-top: 20px;
 #comment__button {
   margin-left: 16px;
 min-width: 150px;
-  background-color: #0065FF;
+  background-color: #0095FF;
   color: white;
 }
 

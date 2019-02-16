@@ -1,14 +1,172 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-  /* Styles */
-  }
-  
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+/*header*/
 
+.nav__container {
+  height: auto;
+}
+.nav__wrapper {
+  padding: 15px 16px;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+
+
+}
+
+.Navbar__Items:first-child {
+  width: 100%;
+  padding-bottom:8px;
+  display: flex;
+}
+
+.Navbar__Items--right {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+}
+
+.search {
+  min-width: 250px;
+}
+
+input.upload__button {
+  width: 200px;
+  margin-left: 0px;
+
+}
+input.upload__button, .man_icon {
+
+  margin-top: 8px;
+}
+
+
+
+  /* section - mobile */ 
+.section__wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+}
+
+.video__herotitle {
+  padding-right: 16px;
+}
+
+.video_item--smallContainer {
+  padding-top: 16px;
   
-  /* iPads (portrait and landscape) ----------- */
-  @media only screen and (min-width : 768px) and (max-width : 1024px) {
-  /* Styles */
+}
+
+.video__paragraph--wrapper {
+  padding-top: 24px;
+  padding-right: 16px;
+}
+
+/*main title - mobile*/ 
+.video_herotitle--wrapper {
+  padding-bottom: 15px;
+}
+
+/*section - comment - mobile */
+
+.convo__input--wrapper {
+  
+flex-flow: column wrap;
+
+}
+.static_comments,.para_i {
+  width: 100%;
+}
+
+.conversation__input {
+  min-width: 50px;
+}
+
+.para {
+  padding-right: 0px;
+}
+
+
+/* section - card list - mobile */ 
+
+  .video__title {
+    width: 100%;
   }
+  
+.cards__item2 {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: baseline;
+  width: 50%;
+}
+
+.cards__item {
+ padding-top: 5px;
+}
+
+.cards__container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+
+}
+  /* tablet size ----------- */
+  @media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+/*header-tablet */ 
+.nav__wrapper {
+  padding: 10px 24px;
+}
+
+/* main - tablet */
+
+.video__wrapper {
+  height: 400px;
+}
+
+
+
+.video__poster--size {
+  height: 400px;
+  
+}
+
+/*section - tablet */
+
+.section__wrapper {
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+
+  }
+
+
+/* section, comment part - tablet */ 
+
+#comment__button {
+min-width: 160px;
+padding: 10px 10px;
+
+
+}
+
+.comment_content {
+  padding-bottom: 18px;
+
+}
+
+/* card section - tablet */ 
+.cards__container {
+  padding-left: 24px;
+}
+
+
 
   @media only screen and (max-width : 1225px) {
    .section__container {
@@ -16,13 +174,7 @@
     align-items: flex-start;
    }
 
-
-
     }
 
-
-  /* Large screens ----------- */
-  @media only screen  and (min-width :1440px) {
-  /* Styles */
-  }
-  
+ 
+ 

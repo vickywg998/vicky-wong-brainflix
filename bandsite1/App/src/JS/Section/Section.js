@@ -29,16 +29,11 @@ class Section extends React.Component {
                   <button id="comment__button" type="button">COMMENT</button></div>
               </div>
             </div>
-
-
-
-
 <CommentList commentObjs={this.props.commentObjs} />
           </div>
           </div>
         </div>
       </div>
-
           <div className="cardlist__wrapper">
           <div className="cards__container">
 

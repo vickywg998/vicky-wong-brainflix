@@ -6,17 +6,15 @@ class Main extends React.Component {
   render() {
     return (
       <main>
- <div className="video__container">
+
  <div className="video__wrapper">
- <img className="video__pic" src={Bikers} alt="" />
- 
+
+ <video poster={Bikers} controls ></video>
  <VideoIcons />
  </div>
- </div>
+
 </main>
 
-
- 
     )
   }
 }
