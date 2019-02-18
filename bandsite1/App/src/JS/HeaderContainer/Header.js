@@ -9,7 +9,7 @@ class Header extends React.Component {
         <div className="nav__container">
           <div className="nav__wrapper">
             <nav className="Navbar__Items">
-              <div className="Navbar__Link">
+              <div className="Navbar__Link logo__position">
                 <img className="logo--size" src={Logo} alt="" />
               </div>
 

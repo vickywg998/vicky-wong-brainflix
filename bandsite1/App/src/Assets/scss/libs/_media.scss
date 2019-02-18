@@ -1,23 +1,23 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 767px) {
+@media only screen and (min-width : 320px) and (max-width : 475px) {
 /*header*/
 
 .nav__container {
   height: auto;
+  
 }
 .nav__wrapper {
   padding: 15px 16px;
   height: auto;
   display: flex;
   flex-flow: column wrap;
-
-
 }
 
 .Navbar__Items:first-child {
   width: 100%;
   padding-bottom:8px;
   display: flex;
+  justify-content: center;
 }
 
 .Navbar__Items--right {
@@ -27,6 +27,11 @@
 
 }
 
+.logo__position {
+
+align-self: center;
+
+}
 .search {
   min-width: 250px;
 }
@@ -69,11 +74,14 @@ input.upload__button, .man_icon {
   padding-bottom: 15px;
 }
 
+
 /*section - comment - mobile */
 
 .convo__input--wrapper {
   
-flex-flow: column wrap;
+flex-flow: row wrap;
+
+
 
 }
 .static_comments,.para_i {
@@ -81,11 +89,30 @@ flex-flow: column wrap;
 }
 
 .conversation__input {
-  min-width: 50px;
+  min-width: 170px;
+  height: 70px;
+  margin-bottom: 16px;
+
+  
+  
 }
+
+
 
 .para {
   padding-right: 0px;
+}
+
+.para_i {
+ display: flex; 
+ flex-flow: column wrap;
+ width: 100%;
+
+
+}
+#comment__button {
+  margin: 0;
+
 }
 
 
@@ -114,6 +141,153 @@ flex-flow: column wrap;
 
 
 }
+
+@media only screen and (min-width : 476px) and (max-width : 767px) {
+  /*header*/
+  
+  .nav__container {
+    height: auto;
+    
+  }
+  .nav__wrapper {
+    padding: 15px 16px;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  
+  .Navbar__Items:first-child {
+    width: 100%;
+    padding-bottom:8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Navbar__Items--right {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  
+  }
+  
+  .logo__position {
+  
+  align-self: center;
+  
+  }
+  .search {
+   width: 180px;
+  }
+  
+  input.upload__button {
+    width: 100px;
+    margin-left: 0px;
+  
+  }
+  input.upload__button, .man_icon {
+  
+    margin-top: 8px;
+  }
+  
+  
+  
+    /* section - mobile */ 
+  .section__wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+  }
+  
+  .video__herotitle {
+    padding-right: 16px;
+  }
+  
+  .video_item--smallContainer {
+    padding-top: 16px;
+    
+  }
+  
+  .video__paragraph--wrapper {
+    padding-top: 24px;
+    padding-right: 16px;
+  }
+  
+  /*main title - mobile*/ 
+  .video_herotitle--wrapper {
+    padding-bottom: 15px;
+  }
+  
+  
+  /*section - comment - mobile */
+  
+  .convo__input--wrapper {
+    
+  flex-flow: row wrap;
+  
+  
+  
+  }
+  .static_comments,.para_i {
+    width: 100%;
+  }
+  
+  .conversation__input {
+    min-width: 450px;
+    height: 70px;
+    margin-bottom: 16px;
+    
+  
+    
+    
+  }
+  
+  
+  
+  .para {
+    padding-right: 0px;
+  }
+  
+  .para_i {
+   display: flex; 
+   flex-flow: column wrap;
+   width: 100%;
+  
+  
+  }
+  #comment__button {
+    margin: 0;
+  
+  }
+  
+  
+  /* section - card list - mobile */ 
+  
+    .video__title {
+      width: 100%;
+    }
+    
+  .cards__item2 {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: baseline;
+    width: 50%;
+  }
+  
+  .cards__item {
+   padding-top: 5px;
+  }
+  
+  .cards__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  
+  
+  }
+  
+
+
   /* tablet size ----------- */
   @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
@@ -160,13 +334,22 @@ padding: 10px 10px;
   padding-bottom: 18px;
 
 }
+.comment__position {
+display: flex; 
+flex-flow: column wrap;
+
+
+}
 
 /* card section - tablet */ 
 .cards__container {
   padding-left: 24px;
 }
 
-
+.conversation__input {
+  padding: 10px 20px 0px 20px;
+  
+}
 
   @media only screen and (max-width : 1225px) {
    .section__container {

@@ -53,6 +53,7 @@ padding-top: 20px;
   
   border-color:  #0065FF;
   min-width: 370px;
+  @include h4-font;
   
 }
 .conversation__input, #comment__button {
@@ -73,6 +74,9 @@ padding-top: 20px;
 min-width: 150px;
   background-color: #0095FF;
   color: white;
+  font-weight: bold;
+  @include h4-font;
+
 }
 
 
@@ -101,6 +105,8 @@ min-width: 150px;
 
 
 }
+
+
 
 .comment_name {
   padding-top: 24px;
