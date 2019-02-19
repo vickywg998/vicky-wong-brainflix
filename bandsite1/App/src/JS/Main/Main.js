@@ -1,19 +1,12 @@
 import React from 'react';
-import Bikers from '../../Assets/Images/video-list-0.jpg'
-
+import Video from '../Main/Video'
 
 class Main extends React.Component {
   render() {
     return (
       <main>
-
- <div className="video__wrapper">
-
- <video poster={Bikers} controls ></video>
-
- </div>
-
-</main>
+       <Video />
+      </main>
 
     )
   }

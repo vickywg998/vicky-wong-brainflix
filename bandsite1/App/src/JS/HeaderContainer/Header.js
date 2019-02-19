@@ -1,6 +1,8 @@
 import React from 'react';
-import Logo from '../../../src/Assets/Logo/logo.png';
-import ManIcon from '../../../src/Assets/Images/Mohan-muruge.jpg'
+import HeaderLogo from '../HeaderContainer/Logo'
+import SearchInput from '../HeaderContainer/SearchInput'
+import UploadButton from '../HeaderContainer/UploadButton'
+import Avatar from '../HeaderContainer/Avatar'
 
 class Header extends React.Component {
   render() {
@@ -9,27 +11,16 @@ class Header extends React.Component {
         <div className="nav__container">
           <div className="nav__wrapper">
             <nav className="Navbar__Items">
-              <div className="Navbar__Link logo__position">
-                <img className="logo--size" src={Logo} alt="" />
-              </div>
-
+             <HeaderLogo />
             </nav>
             <nav className="Navbar__Items Navbar__Items--right">
-              <div className="search__container">
-                <input className="search" placeholder="Search" /></div>
-
-              <div className="Navbar__Link">
-                <input className="upload__button" value="+UPLOAD" type="button" />
-              </div>
-              <div className="Navbar__Link">
-                <img className="man_icon" src={ManIcon} alt="" />
-              </div>
+              <SearchInput />
+              <UploadButton />
+              <Avatar />
             </nav>
           </div>
         </div>
       </header>
-
-
 
     )
   }
