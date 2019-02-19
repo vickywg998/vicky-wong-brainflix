@@ -1,8 +1,8 @@
 import React from 'react';
-import CardList from '../Sidebar/CardList'
-import VideoDescription from '../Section/VideoDescription'
-import singer from '../../../src/Assets/Images/Mohan-muruge.jpg'
-import CommentList from './CommentList';
+import CardList from './Components/Sidebar/CardList'
+import VideoDescription from './Components/Section/VideoDescription'
+import singer from '../Assets/Images/Mohan-muruge.jpg'
+import CommentList from './Components/Section/CommentList';
 
 class Section extends React.Component {
   render() {

@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderLogo from '../HeaderContainer/Logo'
-import SearchInput from '../HeaderContainer/SearchInput'
-import UploadButton from '../HeaderContainer/UploadButton'
-import Avatar from '../HeaderContainer/Avatar'
+import HeaderLogo from './Components/HeaderContainer/Logo'
+import SearchInput from './Components/HeaderContainer/SearchInput'
+import UploadButton from './Components/HeaderContainer/UploadButton'
+import Avatar from './Components/HeaderContainer/Avatar'
 
 class Header extends React.Component {
   render() {

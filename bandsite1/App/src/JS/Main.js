@@ -1,5 +1,5 @@
 import React from 'react';
-import Video from '../Main/Video'
+import Video from './Components/Main/Video'
 
 class Main extends React.Component {
   render() {

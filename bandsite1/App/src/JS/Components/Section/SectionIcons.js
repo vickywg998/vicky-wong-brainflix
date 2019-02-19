@@ -1,6 +1,6 @@
 import React from 'react';
-import Views from '../../../src/Assets/Icons/SVG/Icon-views.svg'
-import Likes from '../../../src/Assets/Icons/SVG/Icon-likes.svg'
+import Views from '../../../Assets/Icons/SVG/Icon-views.svg'
+import Likes from '../../../Assets/Icons/SVG/Icon-likes.svg'
 
 class SectionIcons extends React.Component {
   render() {

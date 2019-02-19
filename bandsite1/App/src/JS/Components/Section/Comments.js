@@ -1,5 +1,6 @@
 import React from 'react';
-import singer from '../../../src/Assets/Images/Mohan-muruge.jpg'
+import singer from '../../../Assets/Images/Mohan-muruge.jpg'
+
 
 class Comments extends React.Component {
   render() {

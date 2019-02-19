@@ -1,5 +1,6 @@
 import React from 'react';
-import ManIcon from '../../../src/Assets/Images/Mohan-muruge.jpg'
+import ManIcon from '../../../Assets/Images/Mohan-muruge.jpg'
+
 
 class Avatar extends React.Component {
   render() {

@@ -1,5 +1,6 @@
 import React from 'react';
-import Bikers from '../../Assets/Images/video-list-0.jpg'
+import Bikers from '../../../Assets/Images/video-list-0.jpg'
+
 
 class Video extends React.Component {
   render() {
