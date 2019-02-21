@@ -401,6 +401,10 @@ img.video__list--img {
   width: 80%;
 }
 
+body {
+  margin: 0px;
+}
+
 /*fonts*/
 body, header, main, section, div {
   -webkit-box-sizing: border-box;
@@ -423,6 +427,54 @@ h1, h2, h3, h4, h5, p {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* upload page*/
+.upload__container {
+  width: 100%;
+  margin: 0px 180px;
+}
+
+.upload__header {
+  font-size: 36px;
+  line-height: 44px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.upload__wrapper--big {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+input, textarea {
+  background-color: #FAFAFA;
+}
+
+.upload__preview--imgsize {
+  width: 344px;
+  height: 183px;
+}
+
+.upload__wrapper--left {
+  margin-right: 24px;
+  width: 24%;
+}
+
+.upload__wrapper--right {
+  width: 60%;
+}
+
+.videothumbnail__title {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
