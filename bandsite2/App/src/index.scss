@@ -1,0 +1,70 @@
+@import './Assets/scss/base/typography';
+@import './Assets/scss/components/header';
+@import './Assets/scss/components/main';
+@import './Assets/scss/components/section';
+@import './Assets/scss/components/sidebar';
+
+
+/*fonts*/ 
+
+@mixin h1-herofont {
+  font-size:60px;
+  line-height: 68px;
+}
+@mixin h1-herofont2 {
+  font-size:60px;
+  line-height: 80px;
+}
+@mixin h1-font {
+font-size: 36px;
+line-height: 44px;
+}
+
+@mixin h2-font {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin h3-font {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin h4-font {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin h5-font {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+body, header, main, section, div{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next"; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin:0;
+}
+
+h1,h2,h3,h4,h5,p {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+
+   
+@import './Assets/scss/libs/media';
