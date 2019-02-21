@@ -5,7 +5,8 @@ import Header from './JS/Header'
 import Main from './JS/Main'
 import Section from './JS/Section'
 import cardImages from './cardImages'
-import CommentObjs from '../src/JS/Section/CommentObjs'
+import CommentObjs from '../src/JS/Components/Section/CommentObjs'
+
 
 class App extends Component {
   render() {
