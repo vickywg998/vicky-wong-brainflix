@@ -1,11 +1,35 @@
 import React from 'react';
-import CardList from './Components/Sidebar/CardList'
+import VideoList from './Components/Sidebar/VideoList'
 import VideoDescription from './Components/Section/VideoDescription'
 import singer from '../Assets/Images/Mohan-muruge.jpg'
 import CommentList from './Components/Section/CommentList';
+import axios from 'axios';
+import { BrowserRouter, Switch, Router, Route, Link } from "react-router-dom";
+
+
+const myAPI = "1a2da34e-4760-45ed-9b07-e9acc896e17f";
+const videoURL = "https://project-2-api.herokuapp.com/videos/?api_key="+ myAPI
+
 
 class Section extends React.Component {
+  state = {
+    videos: []
+
+      }
+      componentDidMount() {
+        axios
+          .get(videoURL)
+          .then(response => {
+            console.log(response.data)
+           
+            this.setState({
+              videos: response.data
+            })
+          })
+      }
+ 
   render() {
+  
     return (
       <section>
         <div className="section__container">
@@ -37,7 +61,7 @@ class Section extends React.Component {
               <div className="cards__wrapper">
                 <h1 className="video__font">NEXT VIDEO</h1>
               </div>
-              <CardList cards={this.props.cardImages} />
+              <VideoList videos={this.state.videos} />
             </div>
           </div>
         </div>

@@ -5,8 +5,8 @@ class HeaderLogo extends React.Component {
   render() {
     return (
       <div className="Navbar__Link logo__position">
-       <Link to="/">
-        <img className="logo--size" src={Logo} alt="" />
+       <Link to="/" className="cool-link">
+        <span><img className="logo--size" src={Logo} alt="" /></span>
         </Link>
       </div>
 
