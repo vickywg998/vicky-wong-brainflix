@@ -318,8 +318,7 @@ flex-flow: row wrap;
 }
 
 
-  }
-
+ 
 
 /* section, comment part - tablet */ 
 
@@ -350,6 +349,8 @@ flex-flow: column wrap;
   padding: 10px 20px 0px 20px;
   
 }
+}
+
 
   @media only screen and (max-width : 1225px) {
    .section__container {
