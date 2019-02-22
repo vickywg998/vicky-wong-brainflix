@@ -3,6 +3,7 @@
 @import './Assets/scss/components/main';
 @import './Assets/scss/components/section';
 @import './Assets/scss/components/sidebar';
+@import './Assets/scss/components/upload';
 
 body {
 margin: 0px;
@@ -66,53 +67,7 @@ code {
     monospace;
 }
 
-/* upload page*/
 
 
 
-.upload__container{
-width: 100%;
-margin: 0px 180px;
-
-}
-.upload__header {
-@include h1-font();
-padding-bottom: 20px;
-border-bottom: 1px solid rgb(210, 210, 210);
-}
-.upload__wrapper--big {
-padding-top: 40px;
-display: flex;
-flex-flow: row wrap;
-}
-
-input, textarea {
-  background-color: #FAFAFA;
-}
-
-.upload__wrapper--small {
-
-}
-
-.upload__preview--imgsize {
-  width: 344px;
-  height: 183px;
-}
-  
-.upload__wrapper--left {
-margin-right: 24px;
-width: 24%;
-}
-
-
-.upload__wrapper--right {
-width: 60%;
-}
-
-
-.videothumbnail__title {
-  @include h5-font()
-  
-}
-   
 @import './Assets/scss/libs/media';
