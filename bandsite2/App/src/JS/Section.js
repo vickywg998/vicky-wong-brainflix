@@ -8,7 +8,10 @@ import { BrowserRouter, Switch, Router, Route, Link } from "react-router-dom";
 
 
 const myAPI = "1a2da34e-4760-45ed-9b07-e9acc896e17f";
-const videoURL = "https://project-2-api.herokuapp.com/videos/?api_key="+ myAPI
+const videoListURL = "https://project-2-api.herokuapp.com/videos/?api_key="+ myAPI
+const streamURL = "https://project-2-api.herokuapp.com/stream/?api_key="+ myAPI
+const videoID = '1af0jruup5gu'
+const videoCommentURL =`http://project-2-api.herokuapp.com/videos/${videoID}?api_key=${myAPI}`
 
 
 class Section extends React.Component {
@@ -18,9 +21,10 @@ class Section extends React.Component {
       }
       componentDidMount() {
         axios
-          .get(videoURL)
+          .get(videoListURL)
           .then(response => {
             console.log(response.data)
+      console.log(response.data[0].comments)
            
             this.setState({
               videos: response.data
