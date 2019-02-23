@@ -11,28 +11,43 @@ const myAPI = "1a2da34e-4760-45ed-9b07-e9acc896e17f";
 const videoListURL = "https://project-2-api.herokuapp.com/videos/?api_key="+ myAPI
 const streamURL = "https://project-2-api.herokuapp.com/stream/?api_key="+ myAPI
 
-const videoCommentURL =(videoID)=>`http://project-2-api.herokuapp.com/videos/${videoID}?api_key=${myAPI}`
+const videoCommentURL ="http://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=1a2da34e-4760-45ed-9b07-e9acc896e17f"
 
 
 
 class Section extends React.Component {
   state = {
-    videos: []
-    
+    videos: [],
+    mainVideo: null,
+    comments: []
+
   
       }
       componentDidMount() {
         axios
           .get(videoListURL)
+         
           .then(response => {
-          
-    
+            console.log(response.data)
             this.setState({
               videos: response.data
             })
-          })
-         
-          
+          });
+       
+          axios.get(videoCommentURL) 
+          .then(response => {
+            console.log(response.data.views)
+            this.setState({
+              mainVideo: response.data.image,
+              views: response.data.views,
+              likes: response.data.likes,
+              comments:response.data.comments,
+              title: response.data.title,
+              channel:response.data.channel,
+              timestamp: response.data.timestamp
+              
+            })
+          })      
       }
  
   render() {
@@ -41,7 +56,12 @@ class Section extends React.Component {
       <section>
         <div className="section__container">
           <div className="section__wrapper">
-            <VideoDescription />
+            <VideoDescription 
+            title={this.state.title} 
+            channel={this.state.channel} 
+           timestamp={this.state.timestamp} 
+            views={this.state.views} 
+            likes={this.state.likes}/>
             <div className="video_item--wrapper">
               <div className="comment_section_container--small">
                 <div className="static_comments" id="comments">
@@ -58,7 +78,7 @@ class Section extends React.Component {
                         <button id="comment__button" type="button">COMMENT</button></div>
                     </div>
                   </div>
-                  <CommentList commentObjs={this.props.commentObjs} />
+                  <CommentList comments={this.state.comments} />
                 </div>
               </div>
             </div>

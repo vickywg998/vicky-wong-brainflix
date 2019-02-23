@@ -4,7 +4,6 @@ import './App.css';
 import Header from './JS/Header'
 import Main from './JS/Main'
 import Section from './JS/Section'
-import CommentObjs from '../src/JS/Components/Section/CommentObjs'
 import Upload from './JS/Components/UploadPage/Upload'
 import HomePage from './JS/Components/HomePage'
 import VideoList from './JS/Components/Sidebar/VideoList'

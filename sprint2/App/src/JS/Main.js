@@ -1,13 +1,12 @@
 import React from 'react';
-import Video from './Components/Main/Video'
+import CurrentVideo from './Components/Main/CurrentVideo'
 
 class Main extends React.Component {
   render() {
     return (
       <main>
-       <Video />
+       <CurrentVideo mainVideo={this.props.mainVideo} />
       </main>
-
     )
   }
 }

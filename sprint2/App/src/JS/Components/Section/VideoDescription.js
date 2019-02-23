@@ -1,29 +1,29 @@
 import React from 'react';
-
-
-
 import Views from '../../../Assets/Icons/SVG/Icon-views.svg'
 import Likes from '../../../Assets/Icons/SVG/Icon-likes.svg'
-
+import Bikers from '../../../Assets/Images/video-list-0.jpg'
 
 
 class VideoDescription extends React.Component {
   render() {
+  
+   
     return (
+      
       <div className="video__item--bigContainer">
 
         <div className="video__herotitle">
-          <h1>BMX Rampage: 2018 Highlights</h1>
+          <h1>{this.props.title}</h1>
         </div>
         <div className="video_item--smallContainer">
           <div className="video_herotitle--wrapper">
-            <span id="video__author">By Red Cow </span>
-            <span className="video__date">12/18/2018</span>
+            <span id="video__author">{this.props.channel}</span>
+            <span className="video__date">{this.props.timestamp}</span>
           </div>
 
           <div className="video_herotitle--wrapper">
-            <span className="video__numbers"><img src={Views} className="icon__position" />1,001,023</span>
-            <span className="video__numbers"><img src={Likes} className="icon__position" />110,985</span>
+        <span className="video__numbers"><img src={Views} className="icon__position" />{this.props.views}</span>
+            <span className="video__numbers"><img src={Likes} className="icon__position" />{this.props.likes}</span>
           </div>
         </div>
         <div className="video__paragraph--wrapper">
@@ -35,9 +35,12 @@ class VideoDescription extends React.Component {
 after his first Red Cow Rampage title</p>
       </div>
       </div>
+    
     )
-  }
-}
+  }}
+
+
+
 
 export default VideoDescription;
 

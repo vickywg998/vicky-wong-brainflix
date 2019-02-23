@@ -1,10 +1,11 @@
 import React from 'react';
 import Comment from './Comment';
 
-class CommentList extends React.Component {
-  render() {
-    const CommentList = this.props.commentObjs.map(function(comment) {
-      return <Comment name={comment.name} date={comment.date} comment={comment.comment} />
+
+const CommentList = props => {
+    const CommentList = props.comments.map((comment,i) => {
+
+      return <Comment name={comment.name} timestamp={comment.timestamp} comment={comment.comment} key={i}/>
     })
     return (
       
@@ -13,6 +14,5 @@ class CommentList extends React.Component {
       </div>
     )
   }
-}
 
 export default CommentList;
