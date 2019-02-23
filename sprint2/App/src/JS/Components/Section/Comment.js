@@ -2,7 +2,7 @@ import React from 'react';
 import singer from '../../../Assets/Images/Mohan-muruge.jpg'
 
 
-class Comments extends React.Component {
+class Comment extends React.Component {
   render() {
     return (
 
@@ -24,8 +24,5 @@ class Comments extends React.Component {
   }
 }
 
-export default Comments;
-
-
-
+export default Comment;
 
