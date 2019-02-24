@@ -11,7 +11,7 @@ const HomePage = props => {
   console.log(props.match.params.id);
   return (
     <div>
-      <Main />
+        <Main videoID = {props.match.params.id} />
       <Section videoID = {props.match.params.id} />
     </div>
   );

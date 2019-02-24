@@ -1,12 +1,17 @@
 import React from 'react';
 import Views from '../../../Assets/Icons/SVG/Icon-views.svg'
 import Likes from '../../../Assets/Icons/SVG/Icon-likes.svg'
-import {Link} from 'react-router-dom'
-import Bikers from '../../../Assets/Images/video-list-0.jpg'
 
 
 class VideoDescription extends React.Component {
+     
   render() {
+
+const date = new Date(this.props.timestamp)
+const year = date.getFullYear();
+const month = date.getMonth() + 1;
+const day = date.getDate();
+const formatDate = `${month}/${day}/${year}`;
 
     return (
       
@@ -18,7 +23,7 @@ class VideoDescription extends React.Component {
         <div className="video_item--smallContainer">
           <div className="video_herotitle--wrapper">
             <span id="video__author">{this.props.channel}</span>
-            <span className="video__date">{this.props.timestamp}</span>
+            <span className="video__date">{formatDate}</span>
           </div>
 
           <div className="video_herotitle--wrapper">
@@ -27,12 +32,7 @@ class VideoDescription extends React.Component {
           </div>
         </div>
         <div className="video__paragraph--wrapper">
-        <p id="video__paragraph">On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the
-   doors off what is possible on two wheels, unleashing some of the biggest
-   moments the sport has ever seen. While mother nature only allowed for one full
-   run before the conditions made it impossible to ride, that was all that was needed
-   for event veteran Kyle Strait, who won the event for the second time -- eight years
-after his first Red Cow Rampage title</p>
+        <p id="video__paragraph">{this.props.description}</p>
       </div>
   
       </div>

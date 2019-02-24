@@ -33,7 +33,7 @@ class Section extends React.Component {
           
           axios.get(mainVideoURL(videoID))
           .then(response => {
-            console.log(response.data.views)
+        
             this.setState({
               mainVideo: response.data.image,
               views: response.data.views,
@@ -41,7 +41,8 @@ class Section extends React.Component {
               comments:response.data.comments,
               title: response.data.title,
               channel:response.data.channel,
-              timestamp: response.data.timestamp
+              timestamp: response.data.timestamp,
+              description: response.data.description
             });
           });
         });
@@ -55,7 +56,7 @@ class Section extends React.Component {
           
           axios.get(mainVideoURL(videoID))
           .then(response => {
-            console.log(response.data.views)
+            
             this.setState({
               mainVideo: response.data.image,
               views: response.data.views,
@@ -63,14 +64,12 @@ class Section extends React.Component {
               comments:response.data.comments,
               title: response.data.title,
               channel:response.data.channel,
-              timestamp: response.data.timestamp
+              timestamp: response.data.timestamp,
+              description: response.data.description
             });
           });
         });
     }
-
-
-
 
  
   render() {
@@ -84,7 +83,8 @@ class Section extends React.Component {
             channel={this.state.channel} 
            timestamp={this.state.timestamp} 
             views={this.state.views} 
-            likes={this.state.likes}/>
+            likes={this.state.likes}
+            description={this.state.description}/>
 
             <div className="video_item--wrapper">
               <div className="comment_section_container--small">
@@ -115,7 +115,7 @@ class Section extends React.Component {
               <div className="cards__wrapper">
                 <h1 className="video__font">NEXT VIDEO</h1>
               </div>
-              <VideoList videos={this.state.videos} />
+              <VideoList videos={this.state.videos}  />
             </div>
           </div>
         </div>
