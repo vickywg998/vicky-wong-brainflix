@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-import Header from '../Header'
+
 import Main from '../Main'
 import Section from '../Section'
 import axios from 'axios';
 import { BrowserRouter, Switch, Router, Route, Link } from "react-router-dom";
 
-class HomePage extends Component {
 
-  render() {
-    return (
-      <div>
-       
-        <Main />
-        <Section />
-      </div>
-    )
-  }
+const HomePage = props => {
+  console.log(props.match.params.id);
+  return (
+    <div>
+      <Main />
+      <Section videoID = {props.match.params.id} />
+    </div>
+  );
 }
 
 export default HomePage;
+
+
 

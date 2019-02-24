@@ -1,13 +1,13 @@
 import React from 'react';
 import Views from '../../../Assets/Icons/SVG/Icon-views.svg'
 import Likes from '../../../Assets/Icons/SVG/Icon-likes.svg'
+import {Link} from 'react-router-dom'
 import Bikers from '../../../Assets/Images/video-list-0.jpg'
 
 
 class VideoDescription extends React.Component {
   render() {
-  
-   
+
     return (
       
       <div className="video__item--bigContainer">
@@ -34,12 +34,11 @@ class VideoDescription extends React.Component {
    for event veteran Kyle Strait, who won the event for the second time -- eight years
 after his first Red Cow Rampage title</p>
       </div>
+  
       </div>
     
     )
   }}
-
-
 
 
 export default VideoDescription;

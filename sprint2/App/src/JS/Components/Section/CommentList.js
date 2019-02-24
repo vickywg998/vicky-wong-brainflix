@@ -8,7 +8,6 @@ const CommentList = props => {
       return <Comment name={comment.name} timestamp={comment.timestamp} comment={comment.comment} key={i}/>
     })
     return (
-      
       <div className="comment_list"> 
         {CommentList}
       </div>

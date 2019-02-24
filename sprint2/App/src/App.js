@@ -10,8 +10,6 @@ import VideoList from './JS/Components/Sidebar/VideoList'
 import { BrowserRouter, Switch, Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 
-
-
 class App extends Component {
  
   render() {
@@ -20,7 +18,9 @@ class App extends Component {
     <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/videos/:id" component={HomePage} data={this.props.data} />
           <Route path="/upload" component={Upload} />
+
         </Switch>
       </div>
     )

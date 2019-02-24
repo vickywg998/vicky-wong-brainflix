@@ -7,12 +7,9 @@ import axios from 'axios';
 import { BrowserRouter, Switch, Router, Route, Link } from "react-router-dom";
 
 
-const myAPI = "1a2da34e-4760-45ed-9b07-e9acc896e17f";
-const videoListURL = "https://project-2-api.herokuapp.com/videos/?api_key="+ myAPI
-const streamURL = "https://project-2-api.herokuapp.com/stream/?api_key="+ myAPI
-
-const videoCommentURL ="http://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=1a2da34e-4760-45ed-9b07-e9acc896e17f"
-
+const myAPI = "?api_key=1a2da34e-4760-45ed-9b07-e9acc896e17f";
+const videoListURL = "https://project-2-api.herokuapp.com/videos/"+ myAPI
+const mainVideoURL =(videoID)=> `http://project-2-api.herokuapp.com/videos/${videoID}${myAPI}`
 
 
 class Section extends React.Component {
@@ -21,20 +18,20 @@ class Section extends React.Component {
     mainVideo: null,
     comments: []
 
-  
       }
-      componentDidMount() {
-        axios
-          .get(videoListURL)
-         
-          .then(response => {
-            console.log(response.data)
-            this.setState({
-              videos: response.data
-            })
+
+    componentDidMount() {
+      axios
+        .get(videoListURL)
+        .then(response => {
+          this.setState({
+            videos: response.data
           });
-       
-          axios.get(videoCommentURL) 
+        })
+        .then(response => {
+          const videoID = this.state.videos[0].id
+          
+          axios.get(mainVideoURL(videoID))
           .then(response => {
             console.log(response.data.views)
             this.setState({
@@ -45,13 +42,17 @@ class Section extends React.Component {
               title: response.data.title,
               channel:response.data.channel,
               timestamp: response.data.timestamp
-              
-            })
-          })      
-      }
+            });
+          });
+        });
+    }
+
+
+
+
  
   render() {
-  
+
     return (
       <section>
         <div className="section__container">
@@ -62,6 +63,7 @@ class Section extends React.Component {
            timestamp={this.state.timestamp} 
             views={this.state.views} 
             likes={this.state.likes}/>
+
             <div className="video_item--wrapper">
               <div className="comment_section_container--small">
                 <div className="static_comments" id="comments">
@@ -78,11 +80,14 @@ class Section extends React.Component {
                         <button id="comment__button" type="button">COMMENT</button></div>
                     </div>
                   </div>
+
                   <CommentList comments={this.state.comments} />
+
                 </div>
               </div>
             </div>
           </div>
+
           <div className="cardlist__wrapper">
             <div className="cards__container">
               <div className="cards__wrapper">
@@ -92,6 +97,7 @@ class Section extends React.Component {
             </div>
           </div>
         </div>
+
       </section>
     )
   }
