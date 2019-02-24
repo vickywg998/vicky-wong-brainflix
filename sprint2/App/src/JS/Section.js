@@ -47,6 +47,28 @@ class Section extends React.Component {
         });
     }
 
+    componentDidUpdate(props) {
+      axios
+        .get(videoListURL)
+        .then(response => {
+          const videoID = props.videoID;
+          
+          axios.get(mainVideoURL(videoID))
+          .then(response => {
+            console.log(response.data.views)
+            this.setState({
+              mainVideo: response.data.image,
+              views: response.data.views,
+              likes: response.data.likes,
+              comments:response.data.comments,
+              title: response.data.title,
+              channel:response.data.channel,
+              timestamp: response.data.timestamp
+            });
+          });
+        });
+    }
+
 
 
 
