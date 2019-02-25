@@ -3,7 +3,7 @@ import Comment from './Comment';
 
 
 const CommentList = props => {
-    const commentList = props.comments.map((comment,i) => {
+    const CommentList = props.comments.map((comment,i) => {
    
       const date = new Date(comment.timestamp)
       const year = date.getFullYear();
@@ -16,8 +16,9 @@ const CommentList = props => {
     })
     return (
       <div className="comment_list"> 
-        {commentList}
+        {CommentList}
       </div>
     )
   }
-  export default CommentList;
+
+export default CommentList;

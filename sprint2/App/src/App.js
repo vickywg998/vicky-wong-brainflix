@@ -18,7 +18,9 @@ class App extends Component {
     <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/videos/:id" component={HomePage} data={this.props.data} />
+          <Route path="/videos/:id"component={HomePage}  render={(props => {
+            return <HomePage {...props} />
+          })} />
           <Route path="/upload" component={Upload} />
 
         </Switch>
