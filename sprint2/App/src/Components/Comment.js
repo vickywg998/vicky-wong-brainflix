@@ -1,5 +1,5 @@
 import React from 'react';
-import singer from '../../../Assets/Images/Mohan-muruge.jpg'
+import singer from '../Assets/Images/Mohan-muruge.jpg'
 
 
 const Comment =props => {
