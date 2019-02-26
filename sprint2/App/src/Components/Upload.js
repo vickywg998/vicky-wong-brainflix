@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../Header'
+import Header from './Header'
 import { Link } from 'react-router-dom'
-import UploadPreview from '../Home/UploadPreview'
+import UploadPreviewVid from '../Assets/Images/UploadVideo-preview.jpg'
 
 class Upload extends React.Component {
   render() {
@@ -14,7 +14,9 @@ class Upload extends React.Component {
 
             <div className="upload__wrapper--small upload__wrapper--left">
               <h5 className="videothumbnail__title">VIDEO THUMBNAIL</h5>
-              <UploadPreview />
+              <div className="Navbar__Link">
+                <img className="upload__preview--imgsize" src={UploadPreviewVid} alt="" />
+              </div>
             </div>
 
             <div className="upload__wrapper--small upload__wrapper--right">
@@ -46,5 +48,5 @@ class Upload extends React.Component {
   }
 }
 
-export default Upload
+export default Upload;
 
