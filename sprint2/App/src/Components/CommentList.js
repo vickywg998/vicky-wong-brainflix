@@ -1,24 +1,25 @@
 import React from 'react';
 import Comment from './Comment';
 
+const commentDate =(date)=> {
+  return new Date(date).toLocaleDateString()
+}
 
 const CommentList = props => {
-    const CommentList = props.comments.map((comment,i) => {
-   
-      const date = new Date(comment.timestamp)
-      const year = date.getFullYear();
-      const month = date.getMonth() + 1;
-      const day = date.getDate();
-      const formatDate = `${month}/${day}/${year}`;
+  const CommentList = props.comments.map((comment, i) => {
 
-
-      return <Comment name={comment.name} timestamp={formatDate} comment={comment.comment} key={i}/>
-    })
-    return (
-      <div className="comment_list"> 
-        {CommentList}
-      </div>
-    )
-  }
+    return <Comment
+      name={comment.name}
+      timestamp={commentDate(comment.timestamp)}
+      comment={comment.comment}
+      key={i} />
+      
+  })
+  return (
+    <div className="comment_list">
+      {CommentList}
+    </div>
+  )
+}
 
 export default CommentList;

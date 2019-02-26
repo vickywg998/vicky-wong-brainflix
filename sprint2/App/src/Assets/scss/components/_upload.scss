@@ -20,27 +20,23 @@ body, header, main, section, div{
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* upload page*/
 
-
 .upload__container{
-width: 100%;
-padding: 0px 180px;
+  width: 100%;
+  padding: 0px 180px;
 
 }
 .upload__header {
-@include h1-font();
-padding: 20px 0px;
-
-
+  @include h1-font();
+  padding: 20px 0px;
 }
 .upload__wrapper--big {
-padding: 40px 0px;
-display: flex;
-flex-flow: row wrap;
-border-top: 1px solid rgb(210, 210, 210);
-border-bottom: 1px solid rgb(210, 210, 210);
+  padding: 40px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  border-top: 1px solid rgb(210, 210, 210);
+  border-bottom: 1px solid rgb(210, 210, 210);
 
 }
 
@@ -57,18 +53,18 @@ input, textarea {
 }
   
 .upload__wrapper--left {
-margin-right: 24px;
-width: 24%;
-display: flex;
-flex-flow: column wrap;
+  margin-right: 24px;
+  width: 24%;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 
 .upload__wrapper--right {
-width: 72%;
-display: flex;
-flex-flow: column wrap;
-
+  width: 72%;
+  display: flex;
+  flex-flow: column wrap;
+ 
 }
 
 
@@ -79,10 +75,9 @@ flex-flow: column wrap;
    
 input.videotitle__input, textarea.videodescription__input {
   width: 100%;
- 
   border-radius: 5px;
-margin-bottom: 24px;
-padding: 8px;
+  margin-bottom: 24px;
+  padding: 8px;
 
 }
 
@@ -91,10 +86,10 @@ textarea.videodescription__input {
 }
 
 .publish__container {
-display: flex; 
-flex-flow: row wrap;
-padding-top: 40px;
-justify-content: flex-end;
+  display: flex; 
+  flex-flow: row wrap;
+  padding-top: 40px;
+  justify-content: flex-end;
 
 }
 .publish__wrapper {
@@ -105,13 +100,13 @@ justify-content: flex-end;
   
 
 .publish__button {
- padding: 10px;
-  min-width: 160px;
-    background-color: #0095FF;
-    color: white;
-    font-weight: bold;
-    @include h4-font;
-    border-radius: 5px;
+   padding: 10px;
+   min-width: 160px;
+   background-color: #0095FF;
+   color: white;
+   font-weight: bold;
+   @include h4-font;
+  border-radius: 5px;
  
 }
 
@@ -123,3 +118,31 @@ justify-content: flex-end;
   display: flex;
   align-items: center;
 }
+
+
+
+.cool-link {
+  display: inline-block;
+  color: #0065AD;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background:#0065AD;
+  transition: width .2s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+}
+
+.video__link {
+  text-decoration: none;
+  color: black;
+}
+
+
