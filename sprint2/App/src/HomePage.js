@@ -21,14 +21,13 @@ class HomePage extends React.Component {
     axios
       .get(videoListURL)
       .then(response => {
-       
+
         this.setState({
           videos: response.data,
-           currentPlayingID: this.props.match.params.id
+          currentPlayingID: this.props.match.params.id
         });
-      
       })
-  
+
       .then(response => {
         const videoID = this.state.videos[0].id
         axios.get(mainVideoURL(videoID))
@@ -37,24 +36,20 @@ class HomePage extends React.Component {
               comments: response.data.comments,
               nowPlayingVideo: response.data.image,
               videoInfo: response.data
-             
-              
             });
-          
           });
       });
   }
-
 
   componentDidUpdate(lastProps) {
     if (this.props.match.params.id !== lastProps.match.params.id) {
       axios
         .get(videoListURL)
-        .then(response => {        
+        .then(response => {
           const videoID = this.props.match.params.id
           this.setState({
             videos: response.data,
-             currentPlayingID: this.props.match.params.id
+            currentPlayingID: this.props.match.params.id
           });
           axios.get(mainVideoURL(videoID))
             .then(response => {
@@ -76,7 +71,7 @@ class HomePage extends React.Component {
           videoInfo={this.state.videoInfo}
           comments={this.state.comments}
           videos={this.state.videos}
-          currentPlayingID={this.state.currentPlayingID}/> 
+          currentPlayingID={this.state.currentPlayingID} />
       </div>
     );
   }

@@ -26,13 +26,16 @@ return (
                 </div>
                 <div className="comment_content comment__position">
                   <h5 className="conversation__title">JOIN THE CONVERSATION</h5>
-                  <div className="para_i"><textarea
-                    className="conversation__input"
-                    type="textarea"
-                    name="firstname"
-                    value="That was easily the most spectacular BMX moment ever." />
-                    <button id="comment__button"
-                      type="button">COMMENT</button>
+                  <div className="para_i">
+                    <textarea
+                      className="conversation__input"
+                      type="textarea"
+                      name="firstname"
+                      value="That was easily the most spectacular BMX moment ever." 
+                    />
+                    <button id="comment__button" type="button">
+                      COMMENT
+                    </button>
                   </div>
                 </div>
               </div>
