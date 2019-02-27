@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Main from './Components/Main'
-import Section from './Components/Section'
+import Main from './Main'
+import Section from './Section'
 import axios from 'axios';
 
 const myAPI = "?api_key=1a2da34e-4760-45ed-9b07-e9acc896e17f";

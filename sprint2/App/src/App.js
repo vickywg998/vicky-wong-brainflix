@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.css'
 import Header from './Components/Header'
-import HomePage from './HomePage'
+import HomePage from './Components/HomePage'
 import Upload from './Components/Upload'
 import {  Switch, Route} from "react-router-dom";
 
