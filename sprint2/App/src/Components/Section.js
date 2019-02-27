@@ -47,7 +47,7 @@ return (
             <h1 className="video__font">NEXT VIDEO</h1>
           </div>
           <VideoList videos={this.props.videos}
-                     nowPlayingVideo={this.props.nowPlayingVideo} />
+                     currentPlayingID={this.props.currentPlayingID} />
 
         </div>
       </div>

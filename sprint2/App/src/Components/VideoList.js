@@ -15,10 +15,13 @@ const VideoList = props => {
         channel={video.channel}
         key={i} />
     </Link>
-  // }).filter(video => {
-  //   return (
-  //     video.id !== this.props.nowPlayingVideoID
-  //   )
+    
+  }).filter(video => {
+    return (
+     video.props.data.id !== props.currentPlayingID
+    )
+    
+  
 });
 
   return (
