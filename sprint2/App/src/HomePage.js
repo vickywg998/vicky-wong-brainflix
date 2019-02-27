@@ -12,8 +12,8 @@ class HomePage extends React.Component {
   state = {
     videos: [],
     nowPlayingVideo: null,
-    comments: [], //name, timestamp, comment
-    videoInfo: [], // likes, views, description, date, channel 
+    comments: [], 
+    videoInfo: [], 
     currentPlayingID: ''
   }
 
@@ -71,7 +71,8 @@ class HomePage extends React.Component {
           videoInfo={this.state.videoInfo}
           comments={this.state.comments}
           videos={this.state.videos}
-          currentPlayingID={this.state.currentPlayingID} />
+          currentPlayingID={this.state.currentPlayingID}
+          />
       </div>
     );
   }

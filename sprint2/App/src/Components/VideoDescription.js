@@ -18,7 +18,8 @@ class VideoDescription extends React.Component {
             <span id="video__author">
               {this.props.videoInfo.channel}</span>
             <span className="video__date">
-              {videoDate(this.props.videoInfo.timestamp)}</span>
+              {videoDate(this.props.videoInfo.timestamp)}
+            </span>
           </div>
           <div className="video_herotitle--wrapper">
             <span className="video__numbers">
@@ -32,7 +33,8 @@ class VideoDescription extends React.Component {
           </div>
         </div>
         <div className="video__paragraph--wrapper">
-          <p id="video__paragraph">{this.props.videoInfo.description}</p>
+          <p id="video__paragraph">
+            {this.props.videoInfo.description}</p>
         </div>
       </div>
     )

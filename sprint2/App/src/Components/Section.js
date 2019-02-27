@@ -15,7 +15,6 @@ return (
       <div className="section__wrapper">
         <VideoDescription
           videoInfo={this.props.videoInfo} />
-
         <div className="video_item--wrapper">
           <div className="comment_section_container--small">
             <div className="static_comments" id="comments">
