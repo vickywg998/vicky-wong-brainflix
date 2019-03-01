@@ -1,9 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-
-console.log(typeof videos)
-
 const videos  = [
   {
   "id": "1af0jruup5gu",
@@ -62,8 +59,7 @@ const videos  = [
   ]
 
 
-
-router.get('/videos', (req, res) => {
+router.get('/', (req, res) => {
   res.json(videos)
 })
 
