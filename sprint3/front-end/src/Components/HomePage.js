@@ -4,11 +4,11 @@ import Section from './Section'
 import axios from 'axios';
 
 const myAPI = "?api_key=1a2da34e-4760-45ed-9b07-e9acc896e17f";
-const videoListURL = "https://project-2-api.herokuapp.com/videos/" + myAPI
-const mainVideoURL = (videoID) => `http://project-2-api.herokuapp.com/videos/${videoID}${myAPI}`
-const currentBunnyVideo= `https://project-2-api.herokuapp.com/stream${myAPI}`
 
-const backendURL = 'http://localhost:8080/videos/'
+// const mainVideoURL = (videoID) => `http://project-2-api.herokuapp.com/videos/${videoID}${myAPI}`
+const mainVideoURL = (videoID)=> `http://localhost:8080/videos/${videoID}`
+const currentBunnyVideo= `https://project-2-api.herokuapp.com/stream${myAPI}`
+const videoListURL = 'http://localhost:8080/videos/'
 
 
 class HomePage extends React.Component {
@@ -24,7 +24,7 @@ class HomePage extends React.Component {
   }
 
   componentDidMount() {
-     axios.get(backendURL)
+     axios.get(videoListURL)
       .then(response => {
 
         this.setState({
@@ -34,7 +34,7 @@ class HomePage extends React.Component {
         });
       })
       .then(response => {
-        const videoID = this.state.videos[0].id
+        const videoID = this.props.match.params.id
         axios.get(mainVideoURL(videoID))
           .then(response => {
             this.setState({
@@ -49,7 +49,7 @@ class HomePage extends React.Component {
   componentDidUpdate(lastProps) {
     if (this.props.match.params.id !== lastProps.match.params.id) {
       axios
-        .get(backendURL)
+        .get(videoListURL)
         .then(response => {
           const videoID = this.props.match.params.id
           this.setState({
