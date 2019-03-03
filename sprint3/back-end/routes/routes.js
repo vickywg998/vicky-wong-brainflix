@@ -7,6 +7,8 @@ const fs = require('fs')
 const bodyparser = require('body-parser')
 const Videos = require('../db/VideoIDInfo.json')
 const VideoIDInfo = require('../db/VideoIDInfo.json')
+// const newVideos = require('../db/newVideos.json')
+// const newVideoIDInfo = require('../db/newVideoIDInfo.json')
 // const VideoUpload = require('./VideoUpload')
 router.use(cors())
 router.use(express.static('website'));
@@ -24,30 +26,42 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+ 
   // const dummyVid = 
   //   {
-  //   "id":  "1a4kj86sfdet",
-  //   "title": "Selfie Animals",
+  //   "id":  uuid.v4(),
+  //   "title": "oh hi there",
   //   "channel": "National Geographic",
   //   "image": "https://i.imgur.com/2ebeLn3.jpg"
   //   };
     const dummyVidInfo =
      {
-      "id": "1a4kj86sfdet",
-      "title": "Selfie Animals",
-      "channel": "National Geographic",
+      "id": uuid.v4(),
+      "title": req.body.title,
+      "channel": "i beg you",
       "image": "https://i.imgur.com/2ebeLn3.jpg",
-      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. ",
+      "description": "heyyyyy",
       "views": "29,543",
       "likes": "8,576",
       "duration": "5:58",
       "video": "https://project-2-api.herokuapp.com/stream",
-      "timestamp": 1538006507000,
+      "timestamp": "03/02/2019",
       "comments": []
       }
       // Videos.push(dummyVid)
       VideoIDInfo.push(dummyVidInfo)
-      res.send('Done') 
+
+      // const newVideos = [...Videos, dummyVid];
+      // fs.writeFileSync('Videos.json', JSON.stringify(newVideos));
+    
+      // const newVideoIDInfo = [...VideoIDInfo, dummyVidInfo];
+      // fs.writeFileSync('VideoIDInfo', JSON.stringify(newVideoIDInfo));
+
+      // if (!dummyVidInfo.title || !dummyVidInfo.description) {
+      //   return res.status(400).send("Please add a title or description");
+      // }
+     
+      // res.json(Videos)
 });
 
 

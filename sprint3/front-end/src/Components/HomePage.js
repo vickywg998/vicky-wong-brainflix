@@ -18,7 +18,7 @@ class HomePage extends React.Component {
     nowPlayingVideo: null,
     comments: [], 
     videoInfo: [], 
-    currentPlayingID: '',
+    // currentPlayingID: '',
     currentBunnyVideo: currentBunnyVideo
  
   }
@@ -30,7 +30,7 @@ class HomePage extends React.Component {
         this.setState({
           videos: response.data,
           videoID:response.data[0].id,
-          currentPlayingID: response.data[0].id,
+          // currentPlayingID: response.data[0].id,
           currentBunnyVideo: currentBunnyVideo
         });
       })
@@ -60,7 +60,6 @@ class HomePage extends React.Component {
     }
   }
 
-
   render() {
     return (
       <div>
@@ -71,7 +70,7 @@ class HomePage extends React.Component {
           videoInfo={this.state.videoInfo}
           comments={this.state.comments}
           videos={this.state.videos}
-          currentPlayingID={this.state.currentPlayingID}
+          // currentPlayingID={this.state.currentPlayingID}
           />
       </div>
     );
