@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import ManIcon from '../Assets/Images/Mohan-muruge.jpg'
 import Logo from '../Assets/Logo/logo.png'
 
+const Header= props => {
 
-class Header extends React.Component {
-  render() {
     return (
       <header>
         <div className="nav__container">
@@ -13,21 +12,30 @@ class Header extends React.Component {
             <nav className="Navbar__Items">
               <div className="Navbar__Link logo__position">
                 <Link to="/" className="cool-link">
-                  <span><img className="logo--size" src={Logo} alt="" /></span>
+                  <span>
+                    <img className="logo--size"
+                         src={Logo} 
+                         alt="" />
+                  </span>
                 </Link>
               </div>
             </nav>
             <nav className="Navbar__Items Navbar__Items--right">
               <div className="search__container">
-                <input className="search" placeholder="Search" />
+                <input className="search" 
+                       placeholder="Search" />
               </div>
               <Link to="/upload">
                 <div className="Navbar__Link">
-                  <input className="upload__button" value="+UPLOAD" type="button" />
+                  <input className="upload__button"
+                         value="+UPLOAD"
+                         type="button" />
                 </div>
               </Link>
               <div className="Navbar__Link">
-                <img className="man_icon" src={ManIcon} alt="" />
+                <img className="man_icon"
+                     src={ManIcon} 
+                    alt="" />
               </div>
             </nav>
           </div>
@@ -36,6 +44,6 @@ class Header extends React.Component {
 
     )
   }
-}
+
 
 export default Header

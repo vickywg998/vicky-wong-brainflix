@@ -7,7 +7,6 @@ const imageURL = "https://i.imgur.com/2ebeLn3.jpg"
 class Upload extends React.Component {
   
   uploadVid = () => {
-    
     axios
       .post(videoListURL, {
         title: this.videoTitle.value,

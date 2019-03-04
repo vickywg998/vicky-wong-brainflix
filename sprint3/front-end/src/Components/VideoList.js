@@ -20,8 +20,6 @@ const VideoList = props => {
     return (
      video.props.data.id !== props.currentPlayingID
     )
-    
-  
 });
 
   return (

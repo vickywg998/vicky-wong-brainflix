@@ -1,10 +1,6 @@
 import React from 'react';
 
-
 class Main extends React.Component {
-  componentDidUpdate () {
-    this.video.load()  
-  }
     render() {
       return (
         <main>

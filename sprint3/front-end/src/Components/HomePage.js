@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Main from './Main'
 import Section from './Section'
 import axios from 'axios';
 
 const myAPI = "?api_key=1a2da34e-4760-45ed-9b07-e9acc896e17f";
-
-// const mainVideoURL = (videoID) => `http://project-2-api.herokuapp.com/videos/${videoID}${myAPI}`
 const mainVideoURL = id => `http://localhost:8080/videos/${id}`
 const currentBunnyVideo= `https://project-2-api.herokuapp.com/stream${myAPI}`
 const videoListURL = 'http://localhost:8080/videos/'
@@ -18,11 +16,8 @@ class HomePage extends React.Component {
     nowPlayingVideo: null,
     comments: [], 
     videoInfo: [], 
-    // currentPlayingID: '',
     currentBunnyVideo: currentBunnyVideo
- 
   }
-
 
   componentDidMount() {
      axios.get(videoListURL)
@@ -30,7 +25,6 @@ class HomePage extends React.Component {
         this.setState({
           videos: response.data,
           videoID:response.data[0].id,
-          // currentPlayingID: response.data[0].id,
           currentBunnyVideo: currentBunnyVideo
         });
       })
@@ -70,7 +64,6 @@ class HomePage extends React.Component {
           videoInfo={this.state.videoInfo}
           comments={this.state.comments}
           videos={this.state.videos}
-          // currentPlayingID={this.state.currentPlayingID}
           />
       </div>
     );

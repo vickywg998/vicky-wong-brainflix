@@ -5,7 +5,6 @@ import HomePage from './Components/HomePage'
 import Upload from './Components/Upload'
 import {  Switch, Route} from "react-router-dom";
 
-
 class App extends Component {
 
   render() {
