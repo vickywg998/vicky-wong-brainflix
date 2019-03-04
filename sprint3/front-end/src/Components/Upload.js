@@ -1,5 +1,4 @@
 import React from 'react';
-import UploadPreviewVid from '../Assets/Images/UploadVideo-preview.jpg'
 import axios from 'axios';
 
 const videoListURL = 'http://localhost:8080/videos/'

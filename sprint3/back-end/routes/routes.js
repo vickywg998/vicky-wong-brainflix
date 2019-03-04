@@ -7,9 +7,8 @@ const fs = require('fs')
 const bodyparser = require('body-parser')
 const Videos = require('../db/VideoIDInfo.json')
 const VideoIDInfo = require('../db/VideoIDInfo.json')
-// const newVideos = require('../db/newVideos.json')
-// const newVideoIDInfo = require('../db/newVideoIDInfo.json')
-// const VideoUpload = require('./VideoUpload')
+
+
 router.use(cors())
 router.use(express.static('website'));
 router.use(bodyparser.urlencoded({ extended: false }));
@@ -30,7 +29,7 @@ router.post('/', (req, res) => {
   // const dummyVid = 
   //   {
   //   "id":  uuid.v4(),
-  //   "title": "oh hi there",
+  //   "title": req.body.title,
   //   "channel": "National Geographic",
   //   "image": "https://i.imgur.com/2ebeLn3.jpg"
   //   };
@@ -38,9 +37,9 @@ router.post('/', (req, res) => {
      {
       "id": uuid.v4(),
       "title": req.body.title,
-      "channel": "i beg you",
+      "channel": "National Geographic",
       "image": "https://i.imgur.com/2ebeLn3.jpg",
-      "description": "heyyyyy",
+      "description": req.body.description,
       "views": "29,543",
       "likes": "8,576",
       "duration": "5:58",
@@ -53,20 +52,17 @@ router.post('/', (req, res) => {
 
       // const newVideos = [...Videos, dummyVid];
       // fs.writeFileSync('Videos.json', JSON.stringify(newVideos));
-    
-      // const newVideoIDInfo = [...VideoIDInfo, dummyVidInfo];
-      // fs.writeFileSync('VideoIDInfo', JSON.stringify(newVideoIDInfo));
+     
+      fs.writeFileSync("./db/VideoIDInfo.json", JSON.stringify(VideoIDInfo));
 
       // if (!dummyVidInfo.title || !dummyVidInfo.description) {
       //   return res.status(400).send("Please add a title or description");
-      // }
-     
-      // res.json(Videos)
+      // }    
+      res.json(VideoIDInfo)
 });
 
 
 module.exports = router;
-
 
 
 
